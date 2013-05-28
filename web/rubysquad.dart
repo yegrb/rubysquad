@@ -1,16 +1,20 @@
 import 'dart:html';
+import 'package:game_loop/game_loop_html.dart';
 
 void main() {
-  query("#sample_text_id")
-    ..text = "Click me!"
-    ..onClick.listen(reverseText);
-}
+  CanvasElement canvasElement = query(".game-canvas");
+  CanvasRenderingContext2D context = canvasElement.context2D;
 
-void reverseText(MouseEvent event) {
-  var text = query("#sample_text_id").text;
-  var buffer = new StringBuffer();
-  for (int i = text.length - 1; i >= 0; i--) {
-    buffer.write(text[i]);
-  }
-  query("#sample_text_id").text = buffer.toString();
+  // Construct a game loop.
+  GameLoopHtml gameLoop = new GameLoopHtml(canvasElement);
+  gameLoop.onUpdate = ((gameLoop) {
+    // Update game logic here.
+    print('${gameLoop.frame}: ${gameLoop.gameTime} [dt = ${gameLoop.dt}].');
+  });
+  gameLoop.onRender = ((gameLoop) {
+    // Draw game into canvasElement using WebGL or CanvasRenderingContext here.
+    // The interpolation factor can be used to draw correct inter-frame
+    print('Interpolation factor: ${gameLoop.renderInterpolationFactor}');
+  });
+  gameLoop.start();
 }

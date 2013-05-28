@@ -1,4 +1,8 @@
-name: rubysquad
-description: A sample web application
+name: ruby_squad
+version: 0.0.1
+author: Mark Bennett
+description: Welcome to a thrilling game of team work and programming! Join your loyal crew as they naviagte the earth plundering wealth and rubies. Fight monsters, build programs, RUBIES!!!
+homepage: http://markbennett.ca
 dependencies:
   browser: any
+  game_loop: any

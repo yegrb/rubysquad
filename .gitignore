@@ -1,1 +1,4 @@
 packages
+.idea/
+.settings
+deploy

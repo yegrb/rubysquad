@@ -6,3 +6,5 @@ homepage: http://markbennett.ca
 dependencies:
   browser: any
   game_loop: any
+  unittest: any
+  start: 0.0.5

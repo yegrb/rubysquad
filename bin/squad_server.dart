@@ -1,13 +1,19 @@
 library squad_server;
 
+import "dart:io";
 import "package:start/start.dart";
 
 main() {
   print("Starting RubySquad server");
   
-  start(public: "../deploy", port: 3000).then((Server app) {
+  int port = 3000;
+  if (Platform.environment.containsKey("PORT")) {
+    port = int.parse(Platform.environment["PORT"]);
+  }
+  print("Running on port = ${port}");
+  start(public: "deploy", port: port).then((Server app) {
     app.get('/', (req, Response res) {
-      print("Getting");
+      print("Getting '/'");
       res.send("Hi there!");
     });
     

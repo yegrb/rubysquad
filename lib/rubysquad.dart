@@ -30,7 +30,7 @@ class RubySquad {
   }
   
   void _initWebSocket() {
-    _socket = new WebSocket("ws://localhost:3000/ws");
+    _socket = new WebSocket("ws://${window.location.hostname}:${window.location.port}/ws");
   }
 
   void start() {

@@ -4,7 +4,7 @@ packages:
   browser:
     description: browser
     source: hosted
-    version: "0.5.9"
+    version: "0.5.11+1"
   game_loop:
     description: game_loop
     source: hosted
@@ -16,12 +16,15 @@ packages:
   meta:
     description: meta
     source: hosted
-    version: "0.5.9"
+    version: "0.5.11+1"
   start:
-    description: start
-    source: hosted
+    description:
+      ref: null
+      resolved-ref: "5027898bfb46504a79dde231f4878cd885109383"
+      url: "https://github.com/MarkBennett/start.git"
+    source: git
     version: "0.0.5"
   unittest:
     description: unittest
     source: hosted
-    version: "0.5.9"
+    version: "0.5.11+1"

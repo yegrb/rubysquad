@@ -1,1 +1,1 @@
-web: ./dart-sdk/bin/dart bin/squad_server.dart
+web: dart bin/squad_server.dart

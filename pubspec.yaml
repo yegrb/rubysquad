@@ -1,10 +1,11 @@
 name: ruby_squad
 version: 0.0.1
 author: Mark Bennett
-description: Welcome to a thrilling game of team work and programming! Join your loyal crew as they naviagte the earth plundering wealth and rubies. Fight monsters, build programs, RUBIES!!!
+description: Welcome to a thrilling game of teamwork and programming! Join your loyal crew as they naviagte the earth plundering wealth and rubies. Fight monsters, build programs, RUBIES!!!
 homepage: http://markbennett.ca
 dependencies:
   browser: any
   game_loop: any
   unittest: any
-  start: 0.0.5
+  start:
+    git: https://github.com/MarkBennett/start.git
